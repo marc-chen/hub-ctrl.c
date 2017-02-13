@@ -78,3 +78,22 @@ Author: NIIBE Yutaka  <gniibe at fsij.org>
 
 This file can be distributed under the terms and conditions of the GNU General
 Public License version 2 (or later).
+
+For RPI
+=======
+
+ref: https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=93463
+
+by DavidVTaylor » Sun Mar 06, 2016 4:11 am
+Just tested this with the Pi 3 in case anyone is interested. Here is what I am seeing. The USB port numbering from the picture posted above:
+
+Hub:Port -- Controlled port(s) 
+  - 0:1 -- Controls the Ethernet port
+  - 0:2 -- Controls all four USB ports (not the Ethernet)
+  - 0:3 -- Controls USB Port 4
+  - 0:4 -- Controls USB Port 2
+  - 0:5 -- Controls USB Port 3
+
+As best I can tell, USB Port 1 cannot be controlled individually. I was expecting 0:2 to map to USB Port 1, but it is being used to control all of the USB ports.
+
+
